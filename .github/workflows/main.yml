@@ -16,17 +16,17 @@ jobs:
         curl --request POST --url '${{ secrets.JIRA_URL }}/rest/api/2/issue' -H "Authorization: Basic ${{ secrets.JIRA_TOKEN }}" \
         --header 'Accept: application/json' 
         --header 'Content-Type: application/json' --data '{
-            "fields": {
-                "project":
-                {
-                    "key": "AIT"
-                },
-                "summary": "Api created task with token auth. Assign to Mike",
-                "description": "Creating of an issue using project keys and issue type names using the REST API, assign to Mike",
-                "assignee":{"name":"mihail.zaharov"},
-                "issuetype": {
-                    "name": "Task"
-                }
-            }
-          }'
+              "fields": {
+                 "project":
+                  {
+                      "key": "AIT"
+                  },
+                  "summary": "Api created task with token auth. Assign to Mike",
+                  "description": "Creating of an issue using project keys and issue type names using the REST API, assign to Mike",
+                  "assignee":{"name":"mihail.zaharov"},
+                  "issuetype": {
+                      "name": "Task"
+                  }
+              }
+            }'
       
