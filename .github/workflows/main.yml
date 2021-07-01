@@ -12,12 +12,12 @@ jobs:
     steps:
     - name: create Jira issue if github issue appears
       uses: corda/jira-create-issue-action
-        with:
-          jiraBaseUrl: ${{ secrets.JIRA_URL }}
-          project: AIT
-          issuetype: Task
-          summary: You have new issue at teraform repo
-          description: heheeeej
-          jiraEmail: ramil.aliev@appsberry.com
-          jiraToken: ${{ secrets.JIRA_TOKEN }}
+      with:
+        jiraBaseUrl: ${{ secrets.JIRA_URL }}
+        project: AIT
+        issuetype: Task
+        summary: You have new issue at teraform repo
+        description: heheeeej
+        jiraEmail: ramil.aliev@appsberry.com
+        jiraToken: ${{ secrets.JIRA_TOKEN }}
 
