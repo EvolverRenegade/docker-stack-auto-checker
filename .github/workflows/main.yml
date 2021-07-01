@@ -10,8 +10,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: create issue by api call
-      run: |
-        echo 'this is test run'
-
+    - name: create Jira issue if github issue appears
+      uses: corda/jira-create-issue-action
+        with:
+          jiraBaseUrl: ${{ secrets.JIRA_URL }}
+          project: AIT
+          issuetype: Task
+          summary: You have new issue at teraform repo
+          description: heheeeej
+          jiraEmail: ramil.aliev@appsberry.com
+          jiraToken: ${{ secrets.JIRA_TOKEN }}
 
