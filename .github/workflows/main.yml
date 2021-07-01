@@ -1,0 +1,17 @@
+name: Test push to jira
+
+on:
+  issues:
+    types: [opened, edited, milestoned]
+
+jobs:
+  api_call:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: create issue by api call
+      run: |
+        echo 'this is test run'
+
+
