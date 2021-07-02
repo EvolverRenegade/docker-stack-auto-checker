@@ -12,7 +12,7 @@ jobs:
     steps:
     - name: create Jira issue if github issue appears
       run: |
-        curl --silent --request POST --url '${{ secrets.JIRA_URL }}/rest/api/2/issue' -H "Authorization: Basic ${{ secrets.JIRA_TOKEN }}" \
+        curl -o /dev/null --silent --request POST --url '${{ secrets.JIRA_URL }}/rest/api/2/issue' -H "Authorization: Basic ${{ secrets.JIRA_TOKEN }}" \
         --header 'Accept: application/json' \
         --header 'Content-Type: application/json' --data '{
               "fields": {
@@ -21,8 +21,8 @@ jobs:
                       "key": "AIT"
                   },
                   "summary": "Api created task with token auth. Assign to Mike",
-                  "description": "Creating of an issue using project keys and issue type names using the REST API, assign to Mike",
-                  "assignee":{"name":"mihail.zaharov"},
+                  "description": "Creating of an issue using project keys and issue type names using the REST API",
+                  "assignee":{"name":"${{ secrets.ASSIGNEE }}"},
                   "issuetype": {
                       "name": "Task"
                   }
