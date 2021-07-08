@@ -20,8 +20,8 @@ jobs:
                   {
                       "key": "AIT"
                   },
-                  "summary": "Api created task From GitHub with token auth, Issue Number ${{ github.event.issue.number }}",
-                  "description": "Creating of an issue using project keys and issue type names using the REST APIб ${{ github.event.issue.title }} , check here ${{ github.event.issue.html_url }}",
+                  "summary": "Hey, You have new issue ${{ github.event.issue.number }} at github",
+                  "description": "${{ github.event.issue.title }} , check here ${{ github.event.issue.html_url }}",
                   "assignee":{"name":"${{ secrets.ASSIGNEE }}"},
                   "issuetype": {
                       "name": "Task"
