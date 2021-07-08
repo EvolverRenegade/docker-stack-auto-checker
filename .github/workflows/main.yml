@@ -20,7 +20,7 @@ jobs:
                   {
                       "key": "AIT"
                   },
-                  "summary": "Hey, You have new issue ${{ github.event.issue.number }} at github",
+                  "summary": "New GH issue ${{ github.event.issue.number }} ${{ github.event.issue.title }}",
                   "description": "${{ github.event.issue.title }} , check here ${{ github.event.issue.html_url }}",
                   "assignee":{"name":"${{ secrets.ASSIGNEE }}"},
                   "issuetype": {
